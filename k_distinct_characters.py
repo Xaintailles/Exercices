@@ -15,7 +15,7 @@ distinct characters is "bcb".
 
 k = 5
 
-string = 'abcbadef'
+string = 'aaaaaaaaaabcbadef'
 
 ### 
 
@@ -27,7 +27,7 @@ def get_all_sub_strings(original_string: str) -> list:
 
 def filter_sub_strings(sub_strings: list, k: int) -> list:
     
-    sub_strings_filtered = [item for item in sub_strings if len(set(item)) == k]
+    sub_strings_filtered = [item for item in sub_strings if len(set(item)) <= k]
     
     return sub_strings_filtered
 
